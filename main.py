@@ -1,11 +1,10 @@
 from src.atm import ATM
 
 if __name__ == '__main__':
-    obj = ATM()
+    atm = ATM()
 
-    obj.deposit([1, 2, 3, 4, 5, 6])
-
-    obj.deposit([1, 2, 3, 4, 5])
-    obj.deposit([1, 2, 3, 4, 5])
-
-
+    atm.deposit([0, 0, 1, 2, 1])
+    atm.withdraw(600)  # [0, 0, 1, 0, 1]
+    atm.deposit([0, 1, 0, 1, 1])
+    atm.withdraw(600)  # [-1]
+    atm.withdraw(550)  # [0, 1, 0, 0, 1]
