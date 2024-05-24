@@ -7,7 +7,6 @@ class ATM:
     def __init__(self):
         self.__banknotes: List[int] = [0, 0, 0, 0, 0]
 
-    # Сложность данной функции O(1), так как это простая операция присваивания в списке фиксированной длины
     def deposit(self, banknotes_count: List[int]):
         banknotes_count = banknotes_validation(banknotes_count)
         if banknotes_count:
