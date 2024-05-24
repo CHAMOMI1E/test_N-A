@@ -13,9 +13,8 @@ class ATM:
         if banknotes_count:
             for banknote in range(len(self.__banknotes)):
                 self.__banknotes[banknote] += banknotes_count[banknote]
-            return print(self.__banknotes)
         else:
-            return print(-1)
+            return print("Неправильно введены значения, проверьте их!")
 
     def withdraw(self, amount: int) -> None:
         temp_banknotes = self.__banknotes[:]
